@@ -1,0 +1,10 @@
+npx create-react-app my-app
+
+https://legacy.reactjs.org/
+
+"react": "^16.10.1",
+    "react-dom": "^16.10.1",
+
+ES7+ React/Redux/React-Native snippets
+
+https://icons8.com/icon/102059/warning-shield
