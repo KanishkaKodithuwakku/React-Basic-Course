@@ -5,16 +5,14 @@ import LinkButton from "../Buttons/LinkButton";
 import CardTitle from "./CardTitle";
 import CardText from "./CardText";
 
-const Card = ({ name, email, age, phone }) => {
+const Card = ({ fname, lanme, avatar, username }) => {
   return (
     <div className="col">
       <div className="card" style={{ width: "18rem", marginBottom: "1rem" }}>
         <CardBody>
-          <Avatar />
-          <CardTitle cardTitle={name} />
-          <CardText description={email} />
-          <CardText description={age} />
-          <CardText description={phone} />
+          <Avatar image={avatar} />
+          <CardTitle cardTitle={fname + " " + lanme} />
+          <CardText description={username} />
           <LinkButton />
         </CardBody>
       </div>
