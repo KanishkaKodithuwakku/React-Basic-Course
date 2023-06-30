@@ -1,0 +1,36 @@
+.btn{
+    border:none;
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 16px;
+}
+
+
+.btn-promary{
+
+}
+
+.card{
+    padding: 10px;
+    border: 1px soild #000;
+}
+
+.app-image{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.icon-close{
+    font-size: 22px;
+    color: #666;
+    text-align: right;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.alert-body{
+    text-align: left;
+}
+.padd-top{
+    padding-top: 40px;
+}
