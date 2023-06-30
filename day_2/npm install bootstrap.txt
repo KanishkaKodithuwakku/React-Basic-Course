@@ -1,0 +1,10 @@
+npm install bootstrap
+
+npm uninstall package --save
+
+https://stylitics.com/
+
+https://react-icons.github.io/react-icons/
+npm install react-icons --save
+
+https://styled-components.com/
