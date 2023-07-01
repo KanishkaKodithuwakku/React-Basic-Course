@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import Card from "./Card/Card";
 import axios from "axios";
 import Spinner from "./Indicaters/Spinner";
-import TextInput from "./Inputs/TextInput";
+import SearchBar from "./Inputs/SearchBar";
+import Form from "./Inputs/Form";
 const TestBench = () => {
   const [users, setUsers] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
@@ -34,7 +35,11 @@ const TestBench = () => {
 
   return (
     <>
-      <TextInput searchable={true} onChange={handleSearch} />
+      {/* <TextInput searchable={true} onChange={handleSearch} /> */}
+
+      <Form formTitle="Add User"/>
+
+      <SearchBar onChange={handleSearch} />
 
       {loading ? (
         <Spinner />
