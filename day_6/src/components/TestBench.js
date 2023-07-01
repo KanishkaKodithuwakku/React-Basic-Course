@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import Card from "./Card/Card";
 import axios from "axios";
 import Spinner from "./Indicaters/Spinner";
+import TextInput from "./Inputs/TextInput";
 const TestBench = () => {
   const [users, setUsers] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+  const [searchText, setSearchText] = React.useState("");
 
   useEffect(() => {
     axios
@@ -19,12 +21,25 @@ const TestBench = () => {
       });
   }, []);
 
+
+
+  const handleSearch = (text) => { 
+    setSearchText(text);
+  }
+
+ const filteredUsers = users.filter((user) =>
+   user.fname.toLowerCase().includes(searchText.toLowerCase()) 
+ );
+
+
   return (
     <>
+      <TextInput searchable={true} onChange={handleSearch} />
+
       {loading ? (
         <Spinner />
       ) : (
-        users.map((user, index) => <Card {...user} key={index} />)
+        filteredUsers.map((user, index) => <Card {...user} key={index} />)
       )}
     </>
   );
