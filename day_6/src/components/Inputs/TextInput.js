@@ -8,6 +8,12 @@ const TextInput = ({
   searchable,
   onChange,
 }) => {
+
+const handleChange = (e) => {
+  onChange(e.target.value);
+};
+
+
   return (
     <div className="mb-3 mt-3">
       {label && (
@@ -28,7 +34,7 @@ const TextInput = ({
           className="form-control"
           id={id}
           placeholder={placeholder}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={handleChange}
         />
       </div>
     </div>
